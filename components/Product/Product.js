@@ -9,7 +9,7 @@ export default function Product({postNum,search}){
             {search.length === 0 ?
             <h1 className={styles.noDataFound}>No Data Found</h1>
         :
-        <Container fluid>
+        <Container fluid className="container">
                     <Row>
                         <Col xs={12} sm={12} md={12} lg={12}>
                         <Row>                    

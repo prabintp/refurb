@@ -51,7 +51,7 @@ export default function Products({data,mainData,header}) {
         return (
             <Layout pageTitle="ShopSite">
                 <Header  data={mainData} />
-                <div className="wrapper">
+                <div className="my-8">
                     <SearchAndFilter value={q} search={(e) => setQ(e.target.value)} filter={(e) => {setFilterParam(e.target.value)}} />
                     <Product postNum={postNum} search={search(items)} />
                         <div style={{textAlign:'center'}}>

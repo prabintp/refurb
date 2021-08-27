@@ -42,9 +42,11 @@ const Details = ({product,mainData}) => {
   return (
     <div>
         <Header data={mainData} />
-          <div className={styles.detail}>
-            <h1 className={styles.detailHeading}>{product.title}</h1>
-            <div className={styles.detailImg}>
+          <div className="container mt-8 min-h-screen">
+            <h1 className="text-4xl my-8">{product.title}</h1>
+            <div className="grid grid-cols-3 gap-4">
+
+            <div >
             <Image
                    alt={product.image.name}
                    src={product.image.formats.small.url}
@@ -52,8 +54,16 @@ const Details = ({product,mainData}) => {
                   height={400}
             />
             </div>
+
+            <div className="col-span-2 pr-4">
             <p className={styles.detailPrice}>Price : $ {product.price}</p>
             <p className={styles.description}>{product.description}</p>
+
+            </div>
+
+            </div>
+           
+           
           </div>
           {mainData[0].components.map( data => (
               (data.__component == "select.footer") ? 

@@ -1,7 +1,11 @@
-
+.btn {
+  @apply py-2 px-4 font-semibold rounded-lg shadow-md;
+}
+.btn-gray {
+  @apply text-white bg-gray-500 hover:bg-gray-700;
+}
 body { 
   margin: 0 auto !important;
-  max-width: 1440px;
   width: 100%;
   font-family: Verdana,Arial,Trebuchet,"Trebuchet MS",Helvetica,Sans-Serif;
 }

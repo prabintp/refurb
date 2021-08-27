@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Image from 'next/image';
+import Image from '../elements/image';
 import {Carousel,CarouselItem,CarouselControl,CarouselIndicators} from 'reactstrap';
 
 const CarouselComponent = ({data}) => {
@@ -32,13 +32,12 @@ const CarouselComponent = ({data}) => {
           key={item.formats.small.url}
         >
           <div className="carouselItem">
-          <Image
-            src={item.formats.small.url}
-            alt={item.name}
-            width={100}
-            height={20}
-            layout='responsive'
-          />
+
+<Image
+        media={item.url} 
+        className=" w-full"
+      />
+          
           </div>
         </CarouselItem>
       );
