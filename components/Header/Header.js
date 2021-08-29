@@ -11,7 +11,7 @@ const Header = ({data}) => {
               <div className="relative flex items-center justify-between h-16">
 
               <div className="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
-              <div class="flex-shrink-0 flex items-center">
+              <div className="flex-shrink-0 flex items-center">
               <Image
                         alt='Logo img'
                         src="/refurbLogo.png"
@@ -21,8 +21,8 @@ const Header = ({data}) => {
 
            </div>
 
-           <div class=" sm:block sm:ml-6">
-            <div class="flex space-x-4 pt-1">
+           <div className=" sm:block sm:ml-6">
+            <div className="flex space-x-4 pt-1">
             {data.map( data => (
             <NavLink href={'/content/' + data.id} className=" text-white px-3 py-2  text-sm font-medium" key={data.id}>
          {data.title}

@@ -18,7 +18,7 @@ export default function Product({postNum,search}){
                                 <div className={styles.card}>
                                 <Image
                                     alt={item.image.name}
-                                    src={item.image.formats.small.url}
+                                    src={item.image?.formats.small.url}
                                     width={150}
                                     height={170}
                                     />
