@@ -5,7 +5,11 @@
   border: 1px solid lightgray;
   border-radius: 12px;
  }
- .cardText{
+ .colContainer{
+   margin-left: 50%;
+   margin-top: -465px;
+ }
+ .cardText,.cardTitle,.cardDetail{
   font-size: 20px;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -13,11 +17,17 @@
   -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
 }
+.cardTitle{
+  font-size: 26px;
+}
+.cardDetail{
+  font-size: 20px;
+}
 .cardSubtext{
   font-size:16px;
   margin-bottom:2px;
 }
-.button {
+.button,.exploreButton {
   background-color: #6c63ff; 
   border: none;
   color: white;
@@ -27,6 +37,10 @@
   border-radius: 8px;
   margin-top: 5px;
   text-align: center;
+}
+.exploreButton{
+  font-size: 20px;
+  margin-top: -5px;
 }
 .detailButton {
   background-color: #6c63ff; 
@@ -51,6 +65,10 @@
   .button{
     margin-bottom: 18px;
   }
+  .colContainer{
+    margin-left: 0;
+    margin-top: 0;
+  }
 }
 @media only screen and (max-width: 600px) {
   .cardText{
@@ -69,4 +87,14 @@
     text-align: center;
     padding-top:0;
    }
+   .colContainer{
+    margin-left: 0;
+    margin-top: 0;
+  }
+  @media only screen and (min-width:1000px) {
+    .colContainer{
+      margin-left: 50%;
+      margin-top: -40.5%;
+    }
+  }
 } 

@@ -1,5 +1,4 @@
 import React,{ useState, useEffect } from 'react';
-import axios from 'axios';
 import Product from '../components/Product/Product';
 import SearchAndFilter from '../components/SearchFilter/SearchFilter';
 import Layout from '../components/Layout';
