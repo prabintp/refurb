@@ -1,6 +1,7 @@
 .detail{
   margin: 20px 20px 0 0;  
-  overflow: auto
+  overflow: auto;
+  margin-top: -2%;
 }
 .detailHeading{
   font-size:24px ;
@@ -10,6 +11,7 @@
   float: left;
   margin-left: 1%;
   margin-right: 2%;
+  margin-top: -2%;
 }
 .detailImg Image {
   display: block
@@ -20,8 +22,55 @@
 }
 .detailPrice{
   color: #6c63ff;
-  margin-top: 5%;
+  margin-top: 3%;
   font-size:22px;
+}
+.contactDetails{
+  font-size: 20px;
+  color: #6c63ff;
+}
+.contactDiv{
+  display: flex;
+}
+.addressLabel,.phoneNoLabel{
+  font-size: 18px;
+  font-weight: bold;
+  margin-right: 5px;
+}
+.address,.phoneNo{
+  font-size: 18px;
+}
+.similarProducts{
+  font-size: 24px;
+}
+.card{
+  padding: 2px;
+  margin: 10px ;
+  text-align: center;
+  border: 1px solid lightgray;
+  border-radius: 12px;
+ }
+ .cardLink{
+  text-decoration: none;
+  color: inherit;
+  cursor: auto;
+ }
+ .cardLink:hover {
+  text-decoration: none;
+  color: inherit;
+  cursor:pointer;
+}
+ .cardText{
+  font-size: 18px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+.cardSubtext{
+  font-size:16px;
+  margin-bottom:2px;
 }
 @media only screen and (max-width: 1024px) {
   .detail{
@@ -30,8 +79,15 @@
   .detailPrice{
     text-align: center;
   }
+  .cardText{
+    font-size: 20px;
+  }
 }
 @media only screen and (max-width: 600px) {
+  .cardText{
+    font-size: 22px;
+    text-align: center;
+  }
   .detail{
     text-align: center;
   }
@@ -43,5 +99,9 @@
   }
   .description{
     font-size: 20px;
+  }
+  .cardSubtext{
+    font-size: 18px;
+    text-align: center;
   }
 } 

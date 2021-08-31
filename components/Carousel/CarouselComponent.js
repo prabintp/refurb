@@ -24,22 +24,27 @@ const CarouselComponent = ({data}) => {
       setActiveIndex(newIndex);
     }
   
-    const slides = items.map((item) => {
+    const slides = items.map((item, index) => {
       return (
-        <CarouselItem
+       
+            <CarouselItem
           onExiting={() => setAnimating(true)}
           onExited={() => setAnimating(false)}
-          key={item.formats.small.url}
+          key={item?.url}
         >
           <div className="carouselItem">
 
+
 <Image
-        media={item.url} 
-        className=" w-full"
+        media={item?.url} 
+        className="w-full"
       />
-          
+         
           </div>
         </CarouselItem>
+
+       
+        
       );
     });
   
