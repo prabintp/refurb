@@ -12,25 +12,34 @@ export default function Other({aboutData,mainData,data}) {
         return (
             <Layout pageTitle="ShopSite">
                 <Header data={mainData} />
-                <div>
-                    <h2>{data.title}</h2>
-                </div>
+            <div className="container">
+                
                 {aboutData.map( data => (
                     (data.__component == "select.rich-text") ? 
-                    <div className="textDiv">
-                        <div className="textSide">
-                        <p className="subHeader">{data.heading}</p>
-                        <h3>{data.subHeading}</h3>
-                        <p className="desp">{data.description}</p>
+                    <div>
+                        {data.image ? 
+                        <div className="textDiv">
+                            <div className="textSide">
+                            <p className="subHeader">{data.heading}</p>
+                            <h3>{data.subHeading}</h3>
+                            <p className="desp">{data.description}</p>
+                            </div>
+                            <div className="imgSide">
+                                <Image
+                                alt={data.image.name}
+                                src={data.image.formats.small.url}
+                                width={200}
+                                height={250}
+                                />
+                            </div>
                         </div>
-                        <div className="imgSide">
-                        {data.image && <Image
-                            alt={data.image?.name}
-                            src={data.image?.formats.small.url}
-                            width={200}
-                            height={250}
-                            />}
+                        :
+                        <div>
+                            <p className="subHeader">{data.heading}</p>
+                            <h3>{data.subHeading}</h3>
+                            <p className="desp">{data.description}</p>
                         </div>
+                        }
                     </div>
                     : 
                     null
@@ -41,18 +50,20 @@ export default function Other({aboutData,mainData,data}) {
                     : 
                     null
                  ))}
+                   {aboutData.map( data => (
+                    (data.__component == "select.categories") ? 
+                        <ProductCategory data={data} />
+                    : 
+                    null
+                 ))}
+                 </div>
                 {aboutData.map( data => (
                     (data.__component == "select.footer") ? 
                         <Footer data={data} /> 
                     : 
                     null
                  ))}
-                 {aboutData.map( data => (
-                    (data.__component == "select.categories") ? 
-                        <ProductCategory data={data} />
-                    : 
-                    null
-                 ))}
+               
                
             </Layout>
         

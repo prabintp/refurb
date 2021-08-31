@@ -26,7 +26,7 @@ const CarouselComponent = ({data}) => {
   
     const slides = items.map((item, index) => {
       return (
-        <div key={index}>
+       
             <CarouselItem
           onExiting={() => setAnimating(true)}
           onExited={() => setAnimating(false)}
@@ -34,15 +34,16 @@ const CarouselComponent = ({data}) => {
         >
           <div className="carouselItem">
 
+
 <Image
-        media={item.formats.large.url} 
-        className="flex-shrink-0 object-contain w-full md:w-6/12 mt-6 md:mt-0"
+        media={item?.url} 
+        className="w-full"
       />
          
           </div>
         </CarouselItem>
 
-        </div>
+       
         
       );
     });
